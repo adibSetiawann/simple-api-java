@@ -29,12 +29,6 @@ public class ProductController {
     public Iterable<Product> findAll() {
         return productService.findAll();
     }
-
-    @GetMapping
-    public Iterable<Product> findAvailableProduct(@RequestBody Integer name) {
-        return productService.findAvailableProducts(name);
-    }
-
     @GetMapping("/{id}")
     public Product findById(@PathVariable("id") Long id) {
         return productService.finfById(id);

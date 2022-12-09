@@ -1,6 +1,5 @@
 package com.simple_api.services;
 
-import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -39,9 +38,5 @@ public class ProductService {
 
     public void removeProduct(Long id) {
         productRepo.deleteById(id);
-    }
-
-    public List<Product> findAvailableProducts(Integer name) {
-        return productRepo.findAvailableProducts(name);
     }
 }
